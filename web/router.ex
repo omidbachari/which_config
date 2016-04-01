@@ -15,8 +15,12 @@ defmodule WhichConfig.Router do
 
   scope "/", WhichConfig do
     pipe_through :browser # Use the default browser stack
+  end
 
-    resources "/configs", ConfigController
+  scope "/api", WhichConfig do
+    pipe_through :api
+
+    resources "configs", ConfigController, only: [:index]
   end
 
   # Other scopes may use custom stacks.
