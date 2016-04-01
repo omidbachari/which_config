@@ -1,0 +1,6 @@
+<h2>New config</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: config_path(@conn, :create) %>
+
+<%= link "Back", to: config_path(@conn, :index) %>

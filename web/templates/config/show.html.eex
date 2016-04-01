@@ -1,0 +1,18 @@
+<h2>Show config</h2>
+
+<ul>
+
+  <li>
+    <strong>Owner:</strong>
+    <%= @config.owner %>
+  </li>
+
+  <li>
+    <strong>Config handle:</strong>
+    <%= @config.config_handle %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: config_path(@conn, :edit, @config) %>
+<%= link "Back", to: config_path(@conn, :index) %>
