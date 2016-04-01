@@ -6,4 +6,4 @@ This application is an Elixir on Phoenix API that surveys Mojos for data on thei
 
 ### Example Post
 
-curl --data "config[config_handle]=spacemacs&config[owner]=omidz" http://localhost:4000/api/configs
+`curl --data "config[config_handle]=spacemacs&config[owner]=omidz" http://localhost:4000/api/configs`
