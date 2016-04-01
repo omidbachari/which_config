@@ -1,6 +1,8 @@
 defmodule WhichConfig.Config do
   use WhichConfig.Web, :model
 
+  @derive { Poison.Encoder, only: [:owner, :config_handle] }
+
   schema "configs" do
     field :owner, :string
     field :config_handle, :string
