@@ -20,7 +20,7 @@ defmodule WhichConfig.Router do
   scope "/api", WhichConfig do
     pipe_through :api
 
-    resources "configs", ConfigController, only: [:index]
+    resources "configs", ConfigController, only: [:index, :show, :create]
   end
 
   # Other scopes may use custom stacks.
