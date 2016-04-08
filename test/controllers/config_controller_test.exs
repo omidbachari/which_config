@@ -32,7 +32,7 @@ defmodule WhichConfig.ConfigControllerTest do
     config =
       %Config{config_handle: "spacemacs", owner: "Adam Robinson"}
       |> Repo.insert
-      conn = get conn, config_path(conn, :show, elem(config,1).id)
+    conn = get conn, config_path(conn, :show, elem(config,1).id)
 
     assert json_response(conn, 200)
     assert Poison.decode!(conn.resp_body)["config"] === %{"config_handle" => "spacemacs", "owner" => "Adam Robinson"}
