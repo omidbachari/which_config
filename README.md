@@ -30,5 +30,5 @@ $ mix phoenix.server
 
 #### Example command line interaction with API
 ```no-highlight
-$ curl --data "config[config_handle]=spacemacs&config[owner]=your_name" http://localhost:4000/api/configs`
+$ curl --data "config[config_handle]=spacemacs&config[owner]=your_name" http://localhost:4000/api/configs
 ```
