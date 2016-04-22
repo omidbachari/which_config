@@ -4,6 +4,8 @@ defmodule WhichConfig.UserSocket do
   ## Channels
   # channel "rooms:*", WhichConfig.RoomChannel
 
+  channel "configs:*", WhichConfig.ConfigChannel
+
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
   # transport :longpoll, Phoenix.Transports.LongPoll

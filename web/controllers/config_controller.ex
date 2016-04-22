@@ -20,6 +20,8 @@ defmodule WhichConfig.ConfigController do
 
     case Repo.insert(changeset) do
       {:ok, config} ->
+        WhichConfig.ConfigChannel.broadcast_change(config)
+
         conn
         |> put_status(:created)
         |> render("show.json", config: config)
