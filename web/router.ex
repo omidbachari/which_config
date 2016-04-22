@@ -15,6 +15,8 @@ defmodule WhichConfig.Router do
 
   scope "/", WhichConfig do
     pipe_through :browser # Use the default browser stack
+
+    get "/", HomeController, :index
   end
 
   scope "/api", WhichConfig do
